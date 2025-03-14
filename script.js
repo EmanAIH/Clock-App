@@ -11,10 +11,12 @@ function getTime(){
     let hours = date.getHours();
     let seconds = date.getSeconds();
     let minutes = date.getMinutes();
-    hourSpan.innerText = `${hours}: `
-    secondSpan.innerText = `${seconds} `
-    minSpan.innerText = `${minutes}: `
+    hourSpan.innerText =  hours.toString().padStart(2, "0");
+    secondSpan.innerText = seconds.toString().padStart(2, "0");
+    minSpan.innerText = minutes.toString().padStart(2, "0");
 
-}
+};
 
-setTimeout(getTime, 1000)
+setInterval(getTime, 1000);
+
+getTime();
